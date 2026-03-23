@@ -1449,6 +1449,7 @@ span.red {
     border: 0.0625rem solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
     min-height: 17.8125rem;
+    transition:0.4s all ease-in-out
 }
 
 .shipping-card:hover {
