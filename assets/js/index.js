@@ -49,3 +49,11 @@ function scrollToNext() {
         header.classList.remove("scrolled");
     }
 });
+
+
+// Loader JS Start
+window.addEventListener('load', function () {
+  document.getElementById('loader').style.display = 'none';
+  document.querySelector('.content').style.display = 'block';
+});
+// Loader JS End
