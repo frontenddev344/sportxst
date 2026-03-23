@@ -110,6 +110,9 @@
     .jersey_contact_wrapper {
         flex-direction: column-reverse;
     }
+    .jersey_page_cards {
+        padding:2.5rem 0;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -153,6 +156,9 @@
     }
     .last-update-content h4 {
         font-size: 1.625rem;
+    }
+    .jersey_page_card {
+          width: 100%;
     }
 }
 
