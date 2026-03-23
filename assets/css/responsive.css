@@ -151,6 +151,9 @@
     .shipping-grid {
         grid-template-columns:1fr;
     }
+    .last-update-content h4 {
+        font-size: 1.625rem;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -165,5 +168,8 @@
 
     .footer-logo a {
         width: 11.75rem;
+    }
+    .last-update-content h4 {
+        font-size: 1.375rem;
     }
 }
