@@ -1,0 +1,169 @@
+@media screen and (max-width:119px) {
+
+    html {
+        font-size: 0.9375rem;
+    }
+
+    .legends-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 991px) {
+    .nav-pill {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .auth-content {
+        padding: 1.875rem 1.25rem;
+    }
+
+    .fan-card {
+        text-align: center;
+    }
+
+    .small-img img {
+        margin: 0 auto;
+    }
+
+    .small-img img {
+        max-width: 15.625rem;
+    }
+
+    .auth-content {
+        max-width: 100%;
+    }
+
+    .collection-card {
+        text-align: center;
+    }
+
+    .built-by-section .main-img img {
+        max-width: 31.25rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo logo"
+            "links contact";
+
+    }
+
+    .footer-links,
+    .footer-contact {
+        border-left: none;
+    }
+
+    .footer-features {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+    .legends-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .shipping-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 0.875rem;
+    }
+
+    .hero-content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .small-img img {
+        max-width: 60%;
+    }
+
+    .footer-links,
+    .footer-contact {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    .jersey_contact_wrapper {
+        flex-direction: column;
+    }
+
+    .jersey_contact_wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:575px) {
+
+    .section_heading {
+        font-size: 2rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "links"
+            "contact";
+    }
+
+    .footer-logo a {
+        width: 12.75rem;
+    }
+
+    .legends-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links,
+    .footer-contact {
+        border-top: 0.0625rem solid rgb(192 147 66/30%);
+        padding-top: 1.25rem;
+    }
+
+    .footer-features {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .footer-features .feature-item {
+        justify-content: flex-start;
+    }
+    .shipping-grid {
+        grid-template-columns:1fr;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .py-7 {
+        padding: 3.375rem 0;
+    }
+
+    .py-10 {
+        padding: 3.25rem 0;
+    }
+
+    .footer-logo a {
+        width: 11.75rem;
+    }
+}
