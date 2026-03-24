@@ -11,12 +11,24 @@ function closeMenu() {
 
 
 // Scroll to next section Start
-function scrollToNext() {
-  const section = document.getElementById("next-section");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+
+(function() {
+  'use strict';
+
+  var btnScrollDown = document.querySelector('#scroll_down');
+
+  function scrollDown() {
+    const nextSection = window.innerHeight;
+
+    window.scrollTo({
+      top: nextSection,
+      behavior: "smooth"
+    });
   }
-}
+
+  btnScrollDown.addEventListener('click', scrollDown);
+})();
+
 // Scroll to next section End
 
 // AOS JS Start
@@ -54,12 +66,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-// Loader JS Start
-window.addEventListener('load', function () {
-  document.getElementById('loader').style.display = 'none';
-  document.querySelector('.content').style.display = 'block';
-});
-// Loader JS End
+
 
 // Cookies JS Start
 (function () {
@@ -111,3 +118,9 @@ function getCookie(cname) {
 
 // Cookies JS END
 
+// Loader JS Start
+window.addEventListener('load', function () {
+  document.getElementById('loader').style.display = 'none';
+  document.querySelector('.content').style.display = 'block';
+});
+// Loader JS End
