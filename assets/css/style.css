@@ -1558,7 +1558,7 @@ h3.badge_heading {
     margin-bottom: 0;
   }
   
-  .last-update-content h4 {
+  .last-update-content h4, .last-update-content h2 {
     color: #fff;
     font-size: 1.75rem;
     font-weight: bold;
