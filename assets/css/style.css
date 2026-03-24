@@ -493,11 +493,27 @@ span.red {
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
-    color: #fff;
+    color: #d94e1f;
     border: none;
     font-family: "Hanken Grotesk", sans-serif;
 }
+.arrow {
+    display: inline-block;
+    margin-right: 6px;
+    animation: softBounce 2s ease-in-out infinite;
+    font-size: 20px;
+}
 
+@keyframes softBounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(6px); /* very subtle */
+        opacity: 0.7;
+    }
+}
 .banner_content p {
     max-width: 50rem;
     line-height: 1.6;
