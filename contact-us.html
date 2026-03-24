@@ -21,7 +21,7 @@
     <header class="header">
         <div class="container">
             <div class=" header-container d-flex align-items-center justify-content-between">
-              <a class="d-flex align-items-center gap-2 header_logo" href="./">
+                <a class="d-flex align-items-center gap-2 header_logo" href="./">
                     <img src="assets/images/logo.png" alt="logo" class="img-fluid">
                 </a>
                 <div class="nav-pill d-none d-lg-flex align-items-center">
@@ -43,7 +43,7 @@
                     <a href="./about-us">About Us</a>
                     <a href="./authentication">Authentication</a>
                     <a href="./shipping">Shipping</a>
-                    <a class="./btn-touch w-100 mt-3 active" href="contact-us" >Get in Touch</a>
+                    <a class="./btn-touch w-100 mt-3 active" href="contact-us">Get in Touch</a>
                     <a class="./btn-outline-custom w-100 mt-2" href="/jerseys">Explore Now</a>
                 </div>
             </div>
@@ -96,7 +96,8 @@
     <!-- Contact After Banner Section End -->
 
     <!-- Contact Form Section Start -->
-    <section class="signup_form_sec py-7" id="contact_page" style="background-image: url(assets/images/contact_bg.jpeg);">
+    <section class="signup_form_sec py-7" id="contact_page"
+        style="background-image: url(assets/images/contact_bg.jpeg);">
         <div class=" container">
             <div class="jersey_contact_wrapper">
                 <div class="jersey_contact_left">
@@ -137,31 +138,34 @@
                 <div class="jersey_contact_right">
                     <h2>Contact Form</h2>
                     <p>Fill out the form below and we will respond shortly.</p>
+                    <form id="contactForm" novalidate>
 
-                    <form>
                         <div class="jersey_form_group">
                             <label>Name</label>
-                            <input type="text" placeholder="Name">
+                            <input type="text" id="name" placeholder="Name">
+                            <small class="error"></small>
                         </div>
-
+                    
                         <div class="jersey_form_group">
                             <label>Email</label>
-                            <input type="email" placeholder="Email">
+                            <input type="email" id="email" placeholder="Email">
+                            <small class="error"></small>
                         </div>
-
+                    
                         <div class="jersey_form_group">
                             <label>Phone Number</label>
-                            <input type="text" placeholder="Phone number">
+                            <input type="text" id="phone" placeholder="Phone number">
+                            <small class="error"></small>
                         </div>
-
+                    
                         <div class="jersey_form_group">
                             <label>Message</label>
-                            <textarea placeholder="Message"></textarea>
+                            <textarea id="message" placeholder="Message"></textarea>
+                            <small class="error"></small>
                         </div>
-
-                        <a href="javascript:void(0)" class="butn">
-                            Send A Message
-                        </a>
+                    
+                        <button type="submit" class="butn">Send A Message</button>
+                    
                     </form>
                 </div>
             </div>
@@ -195,7 +199,8 @@
                     <div class="footer-logo">
                         <a href="./" class="bg_center_contain"></a>
                         <p class="text_theme mt-2 footer_logo_text">
-                            Bringing fans closer to the game through <span class="red">authentic basketball memorabilia.</span>
+                            Bringing fans closer to the game through <span class="red">authentic basketball
+                                memorabilia.</span>
                         </p>
                     </div>
                     <div class="footer-links">
@@ -273,6 +278,107 @@
         <div class="spinner"></div>
         <div class="loader_img" style="background-image: url(assets/images/logo.png);"></div>
     </div>
+
+
+    <div id="successPopup" class="success-popup">
+    
+        <div class="popup-inner">
+    
+
+            <div class="popup-logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+    
+   
+            <div class="popup-text">
+                <h4>Thank You!</h4>
+                <p>
+                    Thank you for contacting us. Our team will reach out to you soon.
+                </p>
+                <p class="sub-text">
+                    We truly appreciate your interest in our exclusive basketball memorabilia.
+                </p>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+        
+            let isValid = true;
+        
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const message = document.getElementById("message");
+        
+            const nameRegex = /^[A-Za-z\s]{3,}$/;
+            const phoneRegex = /^[0-9]{10}$/;
+        
+            document.querySelectorAll(".error").forEach(el => el.textContent = "");
+            document.querySelectorAll("input, textarea").forEach(el => {
+                el.classList.remove("input-error", "input-success");
+            });
+        
+            if (!nameRegex.test(name.value.trim())) {
+                setError(name, "Enter at least 3 letters (no numbers)");
+                isValid = false;
+            } else {
+                setSuccess(name);
+            }
+        
+            if (!email.value.includes("@") || !email.value.includes(".")) {
+                setError(email, "Enter a valid email");
+                isValid = false;
+            } else {
+                setSuccess(email);
+            }
+        
+            if (!phoneRegex.test(phone.value.trim())) {
+                setError(phone, "Enter 10 digit phone number");
+                isValid = false;
+            } else {
+                setSuccess(phone);
+            }
+        
+            if (message.value.trim().length < 10) {
+                setError(message, "Minimum 10 characters required");
+                isValid = false;
+            } else {
+                setSuccess(message);
+            }
+        
+       
+            if (isValid) {
+                console.log("Form submitted ✅");
+        
+                const popup = document.getElementById("successPopup");
+                popup.classList.add("show");
+        
+                setTimeout(() => {
+                    popup.classList.remove("show");
+                }, 3000);
+        
+                form.reset();
+            }
+        });
+        
+        function setError(input, message) {
+            const group = input.parentElement;
+            const error = group.querySelector(".error");
+            error.textContent = message;
+            input.classList.add("input-error");
+        }
+        
+        function setSuccess(input) {
+            input.classList.add("input-success");
+        }
+        </script>
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/aos.js"></script>

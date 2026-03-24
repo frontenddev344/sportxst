@@ -61,7 +61,7 @@ window.addEventListener('load', function () {
 });
 // Loader JS End
 
-
+// Cookies JS Start
 (function () {
   "use strict";
 
@@ -72,17 +72,17 @@ window.addEventListener('load', function () {
   cookieAlert.offsetHeight;
 
   if (!getCookie("acceptCookies") && !getCookie("rejectCookies")) {
-      cookieAlert.classList.add("show");
+    cookieAlert.classList.add("show");
   }
 
   acceptCookies.addEventListener("click", function () {
-      setCookie("acceptCookies", true, 60);
-      cookieAlert.classList.remove("show");
+    setCookie("acceptCookies", true, 60);
+    cookieAlert.classList.remove("show");
   });
 
   rejectCookies.addEventListener("click", function () {
-      setCookie("rejectCookies", true, 60);
-      cookieAlert.classList.remove("show");
+    setCookie("rejectCookies", true, 60);
+    cookieAlert.classList.remove("show");
   });
 })();
 
@@ -98,13 +98,16 @@ function getCookie(cname) {
   var decodedCookie = decodeURIComponent(document.cookie);
   var ca = decodedCookie.split(';');
   for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) === ' ') {
-          c = c.substring(1);
-      }
-      if (c.indexOf(name) === 0) {
-          return c.substring(name.length, c.length);
-      }
+    var c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
   }
   return "";
 }
+
+// Cookies JS END
+

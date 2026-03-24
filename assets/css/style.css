@@ -1340,6 +1340,22 @@ h3.badge_heading {
     border: 0.0625rem solid #fff;
 }
 
+.error {
+    color: red;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 4px;
+}
+
+
+.input-error {
+    border-color: red !important;
+}
+
+
+.input-success {
+    border-color: green;
+}
 
 .jersey_contact_left {
     flex: 1;
@@ -1703,3 +1719,59 @@ h3.badge_heading {
     font-size: 0.9375rem;
 }
 /* Cookies CSS End */
+
+
+.success-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #fff;
+    color: #111;
+    padding: 18px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+    border-left: 5px solid #f05a28;
+}
+
+
+.success-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.popup-inner {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+
+.popup-logo img {
+    width: 50px;
+    height: auto;
+}
+
+
+.popup-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.popup-text p {
+    margin: 4px 0;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.popup-text .sub-text {
+    font-size: 0.8rem;
+    color: #777;
+}
