@@ -1054,6 +1054,11 @@ span.red {
 
 .social-icons li a:hover {
     transform: translateY(-0.25rem);
+    border: 0.0625rem solid #f05a28;
+}
+
+.social-icons li a:hover svg {
+   fill: #f05a28;
 }
 
 .footer-top h4 {
@@ -1077,6 +1082,7 @@ span.red {
     height: 100%;
     width: 100%;
     fill: #fff;
+    transition: all 0.2s linear;
 }
 
 .footer-logo h4 {
