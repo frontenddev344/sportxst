@@ -211,6 +211,7 @@ img {
 .section_heading {
     color: #111;
     font-size: 3rem;
+    line-height: 1.2;
 }
 
 span.red {
@@ -248,9 +249,9 @@ span.red {
     background-color: #fff;
     color: #111;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     padding: 0.9375rem 1.875rem;
     overflow: hidden;
     align-items: center;
@@ -522,7 +523,7 @@ span.red {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 37.5rem;
+    max-width: 36.5rem;
 }
 
 .hero-content small {
@@ -700,8 +701,10 @@ span.red {
 .section-tag {
     color: #f05a28;
     letter-spacing: 0.125rem;
-    font-size: 0.75rem;
+    font-size: 0.9375rem;
     text-transform: uppercase;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 600;
 }
 
 .auth-content p {
@@ -721,6 +724,7 @@ span.red {
     padding-left: 1.875rem;
     margin-bottom: 0.75rem;
     color: #ddd;
+    text-align: left;
 }
 
 
@@ -889,7 +893,7 @@ span.red {
 
 /* Newsletter CSS Start */
 .newsletter-section {
-    padding: 6.25rem 1.25rem;
+    padding: 6.25rem 0;
     text-align: center;
     background-image: url(../images/newsletter_bg.png);
     background-color: rgba(0, 0, 0, 0.7);
@@ -1168,14 +1172,16 @@ span.red {
     font-size: 1.5rem;
     margin-bottom: 0.375rem;
     color: #111;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .signed-text {
     color: #f05a28;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0.625rem;
     font-weight: 600;
+    font-family: "Hanken Grotesk", sans-serif;
+    text-transform: uppercase;
 }
 
 .desc {
@@ -1228,7 +1234,7 @@ span.red {
 .jersey_page_cards {
     display: flex;
     gap: 1.25rem;
-    padding: 2.5rem;
+    padding: 3.5rem 1rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1272,7 +1278,8 @@ span.red {
 
 .jersey_page_card h3 {
     margin: 0 0 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1.625rem;
+    line-height: 1.3;
 }
 
 .jersey_page_card ul {
