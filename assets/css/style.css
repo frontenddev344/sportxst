@@ -543,7 +543,7 @@ span.red {
     text-transform: capitalize;
 }
 
-.hero h4 {
+.hero h2 {
     text-transform: capitalize;
 }
 
@@ -669,7 +669,9 @@ span.red {
     font-weight: 600;
     font-size: 2.5rem;
 }
-
+h3.badge_heading {
+    font-size: 1.2rem;
+}
 .collection-card p {
     color: #555;
     font-size: 1.1rem;
@@ -801,7 +803,9 @@ span.red {
 .built-by-section .main-img img {
     max-width: 34.375rem;
 }
-
+.fan-content h3 {
+    font-size: 1.5rem;
+}
 /* Home Built Section CSS End */
 
 
@@ -962,10 +966,12 @@ span.red {
 }
 
 .footer-logo p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffffdb;
     font-weight: 400;
     margin: 0;
+    text-transform: capitalize;
+    line-height: 1.5;
 }
 
 .footer-logo a {

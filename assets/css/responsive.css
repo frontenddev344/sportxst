@@ -37,7 +37,9 @@
     .nav-pill {
         display: none !important;
     }
-
+    .hero h2 {
+        font-size: 1.5rem;
+    }
     .menu-toggle {
         display: block;
     }
