@@ -9,13 +9,7 @@ function closeMenu() {
 }
 // Toggle Menu Functionality End
 
-  // Scroll to next section Start
-function scrollToNext() {
-  document.getElementById("next-section").scrollIntoView({
-      behavior: "smooth"
-  });
-}
-  // Scroll to next section End
+
   // AOS JS Start
   AOS.init({
     duration: 1200,
@@ -57,3 +51,13 @@ window.addEventListener('load', function () {
   document.querySelector('.content').style.display = 'block';
 });
 // Loader JS End
+
+
+  // Scroll to next section Start
+  function scrollToNext() {
+    const section = document.getElementById("next-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+    // Scroll to next section End
