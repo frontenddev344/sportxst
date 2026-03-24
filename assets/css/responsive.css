@@ -283,6 +283,9 @@
     .newsletter-section {
         padding: 4.25rem 0;
     }
+    .shipping-title {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width:480px) {
