@@ -1811,7 +1811,7 @@ button.scroll_down {
     right: 0;
     height: 50px;
     width: 30px;
-    bottom: 0;
+    bottom: 0.625rem;
     background-color: transparent;
     border: 2px solid #f05a28;
     border-radius: 20px;
