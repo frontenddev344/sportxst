@@ -319,4 +319,7 @@
     .hero-content {
         max-width: 23.5rem;
     }
+    .banner_content h1 {
+        font-size: 2rem;
+    }
 }
