@@ -1349,9 +1349,10 @@ h3.badge_heading {
     margin-bottom: 1.25rem;
 }
 
-.jersey_contact_left h4 {
+.jersey_contact_left h3 {
     margin-top: 1.5625rem;
     color: #f05a28;
+    margin-bottom: 1rem;
 }
 
 .jersey_contact_left p {
