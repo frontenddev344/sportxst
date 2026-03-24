@@ -122,6 +122,9 @@
     .jersey_page_card {
         width: 47%;
     }
+    .sidebar a {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -310,6 +313,9 @@
 
     .popup-text p {
         font-size: 0.8rem;
+    }
+    .sidebar a {
+        font-size: 1.2rem;
     }
 
 }
